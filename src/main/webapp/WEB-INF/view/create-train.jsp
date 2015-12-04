@@ -22,35 +22,40 @@
 		<form action="/check-train" method="post">
 			<table style="margin: auto; text-align: left">
 				<tr>
-					<td>Number:</td>
+					<td>Номер поїзда:</td>
 					<td><input name="id" value="${param.id}"
 							   type="int" size="2" maxlength="3"
 							   required /></td>
 				</tr>
 				<tr>
-					<td>Date:</td>
+					<td>Дата:</td>
 					<td><input name="date" value="${param.date}"
 					type="date" size="35" maxlength="35" required /></td>
 				</tr>
 				<tr>
-					<td>Date:</td>
-					<td><input name="date" value="${param.date}"
-							   type="date" size="35" maxlength="35" required /></td>
+					<td>Станція відправлення:</td>
+					<td><input name="departureStation" type="text" size="35"
+							   maxlength="70" required /></td>
 				</tr>
 				<tr>
-					<td>Suite:</td>
+					<td>Станція прибуття:</td>
+					<td><input name="destinationStation" type="text" size="35"
+							   maxlength="70" required /></td>
+				</tr>
+				<tr>
+					<td>Люкс:</td>
 					<td><input name="suiteReserved" value="${param.suiteReserved}"
 							   type="int" size="2" maxlength="3"
 							   required /></td>
 				</tr>
 				<tr>
-					<td>Couple:</td>
+					<td>Купе:</td>
 					<td><input name="coupleReserved" value="${param.coupleReserved}"
 							   type="int" size="2" maxlength="3"
 							   required /></td>
 				</tr>
 				<tr>
-					<td>Berth:</td>
+					<td>Плацкарт:</td>
 					<td><input name="berthReserved" value="${param.berthReserved}"
 					type="int" size="2" maxlength="3"
 					required /></td>
