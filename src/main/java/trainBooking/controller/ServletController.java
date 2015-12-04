@@ -49,6 +49,7 @@ public class ServletController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userPath = request.getServletPath();
+		System.out.println(/*redirect to doPost userPAth /registration*/);
 		String url = "/WEB-INF/view/";
 		
 		CommandFactory commands = CommandFactory.getInstance();
@@ -63,7 +64,7 @@ public class ServletController extends HttpServlet {
 			command.execute(request, response);
 			url += "login.jsp";
 		} else if (userPath.equals("/create-train")) {
-			System.out.println("f2");
+			System.out.println("/*redirect to doPost userPAth /registration*/");
 			url += "create-train.jsp";
 		}
 		request.getRequestDispatcher(url).forward(request, response);
@@ -74,6 +75,7 @@ public class ServletController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userPath = request.getServletPath();
+		System.out.println("doPost userPath " + userPath);
 		String url = "/WEB-INF/view/";
 
 		HttpSession session = request.getSession();
@@ -135,7 +137,7 @@ public class ServletController extends HttpServlet {
 				}
 			}
 		} else if (userPath.equals("/create-train")) {
-			System.out.println("fuck5");
+			System.out.println("5");
 			String create = request.getParameter("create");
 			if (create != null) {
 				command = commands.getCommand("create_train");
@@ -154,7 +156,7 @@ public class ServletController extends HttpServlet {
 
 			System.out.println("fuck3");
 		} else if (userPath.equals("/check-train")) {
-			System.out.println("fuck6");
+			System.out.println("6");
 			String create = request.getParameter("create");
 			System.out.println("fuck4");
 			url += "admin-panel.jsp";
@@ -175,7 +177,7 @@ public class ServletController extends HttpServlet {
 //
 //			System.out.println("fuck3");
 		} else if (userPath.equals("/admin-panel")) {
-			
+			System.out.println(7);
 			// Update users.
 			command = commands.getCommand("update_users");
 			command.execute(request, response);

@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<%@ taglib uri="/WEB-INF/tags/notActiveUser.tld" prefix="booking"  %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,7 +45,7 @@
   </form>
   </c:when>
   <c:otherwise>
-    <booking:notActiveUsers />
+  <c:out value="Неактивованих користувачів не знайдено"></c:out>
   </c:otherwise>
   </c:choose>
     <form action="/create-train" method="get">

@@ -26,8 +26,7 @@ public class MySQLTrainDAO implements TrainDAO {
 					+ "(id, date, suiteReserved, coupleReserved,berthReserved) values "
 					+ "(?, ?, ?, ?, ?)");
 			statement.setInt(1, train.getId());
-//			statement.setString(2, train.get());
-
+			statement.setDate(2, train.getDate());
 			statement.setInt(3, train.getSuiteReserved());
 			statement.setInt(4, train.getCoupeReserved());
 			statement.setInt(5, train.getBerthReserved());

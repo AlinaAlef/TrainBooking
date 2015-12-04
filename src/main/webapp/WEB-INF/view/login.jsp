@@ -29,6 +29,8 @@
 			   <fmt:message key= "Accountnotfound" />
 		   </c:if>
 		</h3>
+
+		/* redirect to doPost userPath /check-login */
 		<form action="/check-login" method="post">
 			<table style="margin: auto">
 				<tr>
@@ -52,6 +54,8 @@
 				</tr>
 			</table>
 		</form>
+
+		/* redirect to doGet userPAth /registration */
 		<form action="/registration" method="get">
 			<input type="submit" class="button-register"
 			name="register" value=<fmt:message key= "Register" /> />
