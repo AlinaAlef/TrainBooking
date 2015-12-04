@@ -22,7 +22,7 @@
 		<form action="/check-train" method="post">
 			<table style="margin: auto; text-align: left">
 				<tr>
-					<td>Номер поїзда:</td>
+					<td>№ поїзда:</td>
 					<td><input name="id" value="${param.id}"
 							   type="int" size="2" maxlength="3"
 							   required /></td>
